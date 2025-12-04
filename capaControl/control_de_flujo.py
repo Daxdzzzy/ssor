@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
 def resolver_sistema(lista_ecuaciones, w=1.2, tol=1e-4, iter_max=50):
     """Coordina el flujo entre traducción, método y servicios de salida"""
@@ -7,6 +6,7 @@ def resolver_sistema(lista_ecuaciones, w=1.2, tol=1e-4, iter_max=50):
     from capaTraduccion.parseador_ecuaciones import convertir_a_matriz
     from capaMetodo.validaciones import es_simetrica, es_diagonal_dominante
     from capaMetodo.ssor import ejecutar_ssor
+    from capaServicios.servicio_graficas import graficar_convergencia 
     
     # 1. Traducir ecuaciones a formato matricial
     matriz, vector_b = convertir_a_matriz(lista_ecuaciones)
@@ -61,14 +61,5 @@ def mostrar_resultados(resultados):
     print("\n--- Solución Final Aproximada ---")
     for i in range(len(resultados['solucion'])):
         print(f"x{i+1} = {resultados['solucion'][i]:.12f}")
-
-
-def graficar_convergencia(resultados):
-    """Servicio de salida: genera gráfico de convergencia"""
-    plt.plot(resultados['errores'], marker='o')
-    plt.yscale('log')
-    plt.xlabel("Iteración")
-    plt.ylabel("Error (escala logarítmica)")
-    plt.title("Convergencia del Método SSOR")
-    plt.grid()
-    plt.show()
+    
+    graficar_convergencia(resultados)
