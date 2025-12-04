@@ -56,6 +56,8 @@ Para colaborar:
 
 ## Pantallazos
 
+![Interfaz principal de la pagina web](/home/ZzzZzz/Pictures/screenshots/12-04-2025-124218.png)
+
 _Agrega aquí las capturas de pantalla del sistema cuando estén disponibles._
 
 ---
