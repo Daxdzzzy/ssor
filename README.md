@@ -62,6 +62,55 @@ _Agrega aquí las capturas de pantalla del sistema cuando estén disponibles._
 
 ---
 
+graph TB
+    Root[📁 Proyecto SSOR]
+    
+    Root --> Main[main.py]
+    Root --> README[README.md]
+    Root --> Pantallazos[📁 Pantallazos]
+    
+    Root --> Control[📁 capaControl]
+    Root --> Interfaz[📁 capaInterfaz]
+    Root --> Metodo[📁 capaMetodo]
+    Root --> Servicios[📁 capaServicios]
+    Root --> Traduccion[📁 capaTraduccion]
+    
+    Control --> CF[control_de_flujo.py]
+    
+    Interfaz --> Servidor[servidor.py]
+    Interfaz --> Static[📁 static]
+    Interfaz --> Templates[📁 templates]
+    
+    Static --> CSS[📁 css]
+    Static --> JS[📁 js]
+    CSS --> StylesCSS[styles.css]
+    JS --> ScriptJS[script.js]
+    Templates --> Index[index.html]
+    
+    Metodo --> SSOR[ssor.py]
+    Metodo --> Valid[validaciones.py]
+    
+    Servicios --> InitBD[inicializar_bd.py]
+    Servicios --> ServBD[servicio_bd.py]
+    Servicios --> ServGraf[servicio_graficas.py]
+    Servicios --> Graficas[📁 graficas]
+    
+    Traduccion --> Parse[parseador_ecuaciones.py]
+    
+    Pantallazos --> InterfazPNG[interfaz.png]
+    
+    style Root fill:#2c3e50,stroke:#34495e,color:#ecf0f1
+    style Control fill:#3498db,stroke:#2980b9,color:#fff
+    style Interfaz fill:#3498db,stroke:#2980b9,color:#fff
+    style Metodo fill:#3498db,stroke:#2980b9,color:#fff
+    style Servicios fill:#3498db,stroke:#2980b9,color:#fff
+    style Traduccion fill:#3498db,stroke:#2980b9,color:#fff
+    style Static fill:#95a5a6,stroke:#7f8c8d,color:#fff
+    style Templates fill:#95a5a6,stroke:#7f8c8d,color:#fff
+    style CSS fill:#95a5a6,stroke:#7f8c8d,color:#fff
+    style JS fill:#95a5a6,stroke:#7f8c8d,color:#fff
+    style Graficas fill:#95a5a6,stroke:#7f8c8d,color:#fff
+    style Pantallazos fill:#95a5a6,stroke:#7f8c8d,color:#fff
 ## Documentación
 
 Este proyecto está construido de manera modular, con las siguientes capas:
